@@ -9,7 +9,30 @@ function ProductScreen() {
     const match = useParams();
     const product = products.find((p) => p._id == match.id);
     return (
-         <div>{product.name}</div>
+         <div>
+            <Link to='/' className='btn btn-light my-3'>Go Back</Link>
+            <Row>
+                <Col md={6}>
+                    <Image src={product.image} fluid alt={product.name}/>
+                </Col>
+
+                <Col md={3}>
+                    <ListGroup variant='flush'>
+                        <ListGroup.Item>
+                            <h3>{product.name}</h3>
+                        </ListGroup.Item>
+
+                        <ListGroup.Item>
+                            <Rating value={product.rating} text={`${product.numReviews} reviews `} colour={'#f8e825'}/>
+                        </ListGroup.Item>
+
+                    </ListGroup>
+                </Col>
+
+                <Col md={3}>
+                </Col>
+            </Row>
+        </div>
 
   )
 }
