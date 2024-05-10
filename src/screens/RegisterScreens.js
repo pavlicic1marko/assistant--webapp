@@ -15,6 +15,8 @@ function RegisterScreens() {
     const [confirPassword, setConfirmPassword] = useState('')
     const [message, setMessage] = useState('')
 
+    const dispatch = useDispatch()
+
 
   return (
     <div>RegisterScreens</div>
