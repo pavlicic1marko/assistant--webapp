@@ -13,7 +13,7 @@ function ProductScreen({match}) {
 
     useEffect(() => {
       async function fetchProduct(){
-        const {data} = await axios.get(`/api/products/${productNumber.id}`)
+        const {data} = await axios.get(`/api/todo/products/${productNumber.id}`)
         setProduct(data)
       }
   
