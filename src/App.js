@@ -7,6 +7,7 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import LoginScreen from './screens/LoginScreen';
 import RegisterScreens from './screens/RegisterScreens';
 import ProfileScreen from './screens/ProfileScreen';
+import AiChatScreen from './screens/AiChatScreen';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
               <Route path='/register' element={<RegisterScreens/>} />
               <Route path='/product/:id' element={<ProductScreen/>} />
               <Route path='/profile' element={<ProfileScreen/>} />
+              <Route path='/ai-chat' element={<AiChatScreen/>}/>
             </Routes>
             
           </Container>

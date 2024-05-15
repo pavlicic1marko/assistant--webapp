@@ -30,7 +30,7 @@ function Header() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
 
-            <LinkContainer to='/cart'>
+            <LinkContainer to='/ai-chat'>
                 <Navbar.Brand >AI Chat</Navbar.Brand>
             </LinkContainer>
 
