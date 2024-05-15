@@ -6,6 +6,7 @@ import {Container} from 'react-bootstrap'
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import LoginScreen from './screens/LoginScreen';
 import RegisterScreens from './screens/RegisterScreens';
+import ProfileScreen from './screens/ProfileScreen';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
               <Route path='/login' element={<LoginScreen/>} />
               <Route path='/register' element={<RegisterScreens/>} />
               <Route path='/product/:id' element={<ProductScreen/>} />
+              <Route path='/profile' element={<ProfileScreen/>} />
             </Routes>
             
           </Container>
