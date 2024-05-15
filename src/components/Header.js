@@ -23,7 +23,7 @@ function Header() {
       <Container>
 
         <LinkContainer to='/'>
-            <Navbar.Brand >ProShop</Navbar.Brand>
+            <Navbar.Brand >Todo</Navbar.Brand>
         </LinkContainer>
         
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -31,7 +31,7 @@ function Header() {
           <Nav className="mr-auto">
 
             <LinkContainer to='/cart'>
-                <Navbar.Brand >Cart</Navbar.Brand>
+                <Navbar.Brand >AI Chat</Navbar.Brand>
             </LinkContainer>
 
             {userInfo ? (

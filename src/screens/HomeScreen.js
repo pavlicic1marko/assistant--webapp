@@ -21,7 +21,7 @@ function HomeScreen() {
 
   return (
     <div>
-        <h1>Latest Products</h1>
+        <h1>TODO List</h1>
         {loading ? <Loader></Loader>
         : error? <Message variant = 'danger'>{error}</Message>
         :

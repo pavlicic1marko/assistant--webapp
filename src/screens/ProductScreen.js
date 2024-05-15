@@ -74,7 +74,7 @@ function ProductScreen({match}) {
                             </ListGroup.Item>
 
                             <ListGroup.Item>
-                                <Button className='btn-blockl' disabled={product.countInStock == 0} type='button'>Add to Cart</Button>
+                                <Button className='btn-blockl' disabled={product.countInStock == 0} type='button'>Delete TODO</Button>
                             </ListGroup.Item>
                         </ListGroup>
                     </Card>
