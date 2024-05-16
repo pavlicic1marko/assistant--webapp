@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import {Row, Col} from 'react-bootstrap'
-import Product from '../components/Products'
+import Todo from '../components/Todo'
 import { useDispatch, useSelector} from 'react-redux'
-import {listProducts} from '../actions/productActions'
+import {listTodo} from '../actions/todoActions'
 import Loader from '../components/Loader'
 import Message from '../components/Message'
 
@@ -11,11 +11,11 @@ import Message from '../components/Message'
 function HomeScreen() {
 
   const dispatch = useDispatch()
-  const productList = useSelector(state => state.productList)
-  const {error, loading,  products} = productList
+  const todoList = useSelector(state => state.todoList)
+  const {error, loading,  todos} = todoList
 
   useEffect(() => {
-    dispatch(listProducts())
+    dispatch(listTodo())
   },[dispatch])
 
 
@@ -26,9 +26,9 @@ function HomeScreen() {
         : error? <Message variant = 'danger'>{error}</Message>
         :
         <Row>
-        {products.map(product => (
-            <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
-                <Product product={product}/>
+        {todos.map(todo => (
+            <Col key={todo._id} sm={12} md={6} lg={4} xl={3}>
+                <Todo todo={todo}/>
             </Col>
         ))}
     </Row>

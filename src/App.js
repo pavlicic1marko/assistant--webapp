@@ -19,7 +19,7 @@ function App() {
               <Route path='/' element={<HomeScreen/>} exact/>
               <Route path='/login' element={<LoginScreen/>} />
               <Route path='/register' element={<RegisterScreens/>} />
-              <Route path='/product/:id' element={<TodoScreen/>} />
+              <Route path='/todo/:id' element={<TodoScreen/>} />
               <Route path='/profile' element={<ProfileScreen/>} />
               <Route path='/ai-chat' element={<AiChatScreen/>}/>
             </Routes>
