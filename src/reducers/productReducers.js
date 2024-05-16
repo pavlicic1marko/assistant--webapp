@@ -1,7 +1,13 @@
 import {
+<<<<<<< HEAD
     TODO_LIST_REQUEST,
     TODO_LIST_SUCCESS,
     TODO_LIST_FAIL,
+=======
+    PRODUCT_LIST_REQUEST,
+    PRODUCT_LIST_SUCCESS,
+    PRODUCT_LIST_FAIL,
+>>>>>>> 893ee60 (refactor file name)
 } from '../constants/todoConstants'
 
 
