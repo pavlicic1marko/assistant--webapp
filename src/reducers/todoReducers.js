@@ -5,15 +5,15 @@ import {
 } from '../constants/todoConstants'
 
 
-export const productListReducer = (state = { products: [] }, action) => {
+export const todoListReducer = (state = { todos: [] }, action) => {
     switch (action.type) {
         case TODO_LIST_REQUEST:
-            return { loading: true, products: [] }
+            return { loading: true, todos: [] }
 
         case TODO_LIST_SUCCESS:
             return {
                 loading: false,
-                products: action.payload}
+                todos: action.payload}
 
         case TODO_LIST_FAIL:
             return { loading: false, error: action.payload }

@@ -6,7 +6,7 @@ import {
 } from '../constants/todoConstants'
 import axios from 'axios'
 
-export const listProducts = () => async (dispatch) => {
+export const listTodo = () => async (dispatch) => {
     try{
         dispatch({type: TODO_LIST_REQUEST})
 

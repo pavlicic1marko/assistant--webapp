@@ -6,18 +6,18 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios'
 
 
-function ProductScreen({match}) {
-    const productNumber = useParams();
+function TodoScreen({match}) {
+    const todoNumber = useParams();
 
-    const [product, setProduct] = useState([])
+    const [todo, setTodo] = useState([])
 
     useEffect(() => {
-      async function fetchProduct(){
-        const {data} = await axios.get(`http://127.0.0.1:8000/api/todo/products/${productNumber.id}`)
-        setProduct(data)
+      async function fetchTodos(){
+        const {data} = await axios.get(`http://127.0.0.1:8000/api/todo/products/${todoNumber.id}`)
+        setTodo(data)
       }
   
-      fetchProduct()
+      fetchTodos()
   
     },[])
 
@@ -26,25 +26,25 @@ function ProductScreen({match}) {
             <Link to='/' className='btn btn-light my-3'>Go Back</Link>
             <Row>
                 <Col md={6}>
-                    <Image src={product.image} fluid alt={product.name}/>
+                    <Image src={todo.image} fluid alt={todo.name}/>
                 </Col>
 
                 <Col md={3}>
                     <ListGroup variant='flush'>
                         <ListGroup.Item>
-                            <h3>{product.name}</h3>
+                            <h3>{todo.name}</h3>
                         </ListGroup.Item>
 
                         <ListGroup.Item>
-                            <Rating value={product.rating} text={`${product.numReviews} reviews `} colour={'#f8e825'}/>
+                            <Rating value={todo.rating} text={`${todo.numReviews} reviews `} colour={'#f8e825'}/>
                         </ListGroup.Item>
 
                         <ListGroup.Item>
-                            Price: ${product.price}
+                            Price: ${todo.price}
                         </ListGroup.Item>
 
                         <ListGroup.Item>
-                            Description: {product.description}
+                            Description: {todo.description}
                         </ListGroup.Item>
 
                     </ListGroup>
@@ -57,7 +57,7 @@ function ProductScreen({match}) {
                             <Row>
                                 <Col>Price:</Col>
                                 <Col>
-                                    <strong>${product.price}</strong>
+                                    <strong>${todo.price}</strong>
                                 </Col>
                             </Row>
                             </ListGroup.Item>
@@ -68,13 +68,13 @@ function ProductScreen({match}) {
                                 <Row>
                                     <Col>Price:</Col>
                                     <Col>
-                                        {product.countInStock > 0 ? 'In Stock': 'Out of Stock'}
+                                        {todo.countInStock > 0 ? 'In Stock': 'Out of Stock'}
                                     </Col>
                                 </Row>
                             </ListGroup.Item>
 
                             <ListGroup.Item>
-                                <Button className='btn-blockl' disabled={product.countInStock == 0} type='button'>Delete TODO</Button>
+                                <Button className='btn-blockl' disabled={todo.countInStock == 0} type='button'>Delete TODO</Button>
                             </ListGroup.Item>
                         </ListGroup>
                     </Card>
@@ -85,4 +85,4 @@ function ProductScreen({match}) {
   )
 }
 
-export default ProductScreen
+export default TodoScreen

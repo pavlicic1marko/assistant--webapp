@@ -1,11 +1,11 @@
 import {createStore, combineReducers, applyMiddleware} from 'redux';
 import {thunk} from "redux-thunk";
 import { composeWithDevTools } from 'redux-devtools-extension';
-import { productListReducer } from './reducers/todoReducers';
+import { todoListReducer } from './reducers/todoReducers';
 import {userLoginReducer, userRegisterReducer} from './reducers/userReducers'
 
 const reducer = combineReducers({
-    productList: productListReducer,
+    todoList: todoListReducer,
     userLogin: userLoginReducer,
     userRegister: userRegisterReducer
 
