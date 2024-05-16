@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import {Row, Col} from 'react-bootstrap'
-import Product from '../components/Products'
+import Product from '../components/Todo'
 import { useDispatch, useSelector} from 'react-redux'
-import {listProducts} from '../actions/productActions'
+import {listProducts} from '../actions/todoActions'
 import Loader from '../components/Loader'
 import Message from '../components/Message'
 
