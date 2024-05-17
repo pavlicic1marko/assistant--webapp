@@ -28,15 +28,12 @@ function TodoScreen({match}) {
                 <Col md={3}>
                     <ListGroup variant='flush'>
                         <ListGroup.Item>
-                            <h3>{todo.name}</h3>
+                            <h4>Title:</h4>
+                            <h6>{todo.name}</h6>
                         </ListGroup.Item>
 
                         <ListGroup.Item>
-                            <Rating value={todo.rating} text={`${todo.numReviews} reviews `} colour={'#f8e825'}/>
-                        </ListGroup.Item>
-
-                        <ListGroup.Item>
-                            Price: ${todo.price}
+                            Created At: ${todo.price}
                         </ListGroup.Item>
 
                         <ListGroup.Item>
@@ -44,36 +41,8 @@ function TodoScreen({match}) {
                         </ListGroup.Item>
 
                     </ListGroup>
-                </Col>
+                    <Button className='btn-block1' disabled={todo.countInStock == 0} type='button'>Delete TODO</Button>
 
-                <Col md={3}>
-                    <Card>
-                        <ListGroup variant='flush'> 
-                            <ListGroup.Item>
-                            <Row>
-                                <Col>Price:</Col>
-                                <Col>
-                                    <strong>${todo.price}</strong>
-                                </Col>
-                            </Row>
-                            </ListGroup.Item>
-                        </ListGroup>
-
-                        <ListGroup variant='flush'> 
-                            <ListGroup.Item>
-                                <Row>
-                                    <Col>Price:</Col>
-                                    <Col>
-                                        {todo.countInStock > 0 ? 'In Stock': 'Out of Stock'}
-                                    </Col>
-                                </Row>
-                            </ListGroup.Item>
-
-                            <ListGroup.Item>
-                                <Button className='btn-blockl' disabled={todo.countInStock == 0} type='button'>Delete TODO</Button>
-                            </ListGroup.Item>
-                        </ListGroup>
-                    </Card>
                 </Col>
             </Row>
         </div>

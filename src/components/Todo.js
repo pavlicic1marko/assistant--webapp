@@ -12,11 +12,6 @@ function Todo({todo}) {
                         <strong>{todo.name}</strong>
                     </Card.Title> 
                 </Link>
-                <Card.Text as ='div'>
-                    <div className='my-3'>
-                        <Rating value={todo.rating} text={`${todo.numReviews} reviews` } color={'#f8e825'}/>
-                    </div>
-                </Card.Text>
                 <Card.Text as ='h3'>
                     {todo.price}
                 </Card.Text>
