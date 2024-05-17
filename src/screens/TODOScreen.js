@@ -25,10 +25,6 @@ function TodoScreen({match}) {
          <div>
             <Link to='/' className='btn btn-light my-3'>Go Back</Link>
             <Row>
-                <Col md={6}>
-                    <Image src={todo.image} fluid alt={todo.name}/>
-                </Col>
-
                 <Col md={3}>
                     <ListGroup variant='flush'>
                         <ListGroup.Item>

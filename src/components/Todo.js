@@ -6,9 +6,6 @@ import { Link } from 'react-router-dom'
 function Todo({todo}) {
   return (
     <Card className='my-3 p-3 rounded'>
-        <Link to={`/todo/${todo._id}`}>
-            <Card.Img src={todo.image}/> 
-        </Link>
             <Card.Body>
                 <Link to={`/todo/${todo._id}`}>
                     <Card.Title as='div'>
