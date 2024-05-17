@@ -13,7 +13,7 @@ function TodoScreen({match}) {
 
     useEffect(() => {
       async function fetchTodos(){
-        const {data} = await axios.get(`http://127.0.0.1:8000/api/todo/products/${todoNumber.id}`)
+        const {data} = await axios.get(`http://127.0.0.1:8001/api/todo/products/${todoNumber.id}`)
         setTodo(data)
       }
   
