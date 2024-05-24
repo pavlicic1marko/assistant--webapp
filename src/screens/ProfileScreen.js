@@ -7,7 +7,7 @@ function ProfileScreen() {
     const { userInfo } = userLogin
   return (
     <div>
-        <h1>Profile Info:</h1>
+        <h1>User Info:</h1>
         <h5>user email: {userInfo.email} </h5>
         <h5>first name:{userInfo.name}</h5>
         <h5>Admin:{userInfo.isAdmin? 'YES': 'NO'}</h5>
