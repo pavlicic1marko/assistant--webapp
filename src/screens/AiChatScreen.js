@@ -6,6 +6,11 @@ function AiChatScreen() {
 
   const [question, setQuestion] = useState('')
 
+  const submitHandler = (e) => {
+    e.preventDefault()
+    console.log('this is a submit test')
+}
+
 
   return (
     <div>
