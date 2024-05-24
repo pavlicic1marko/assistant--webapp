@@ -29,11 +29,11 @@ function TodoScreen({match}) {
                     <ListGroup variant='flush'>
                         <ListGroup.Item>
                             <h4>Title:</h4>
-                            <h6>{todo.name}</h6>
+                            <h6>{todo.title}</h6>
                         </ListGroup.Item>
 
                         <ListGroup.Item>
-                            Created At: ${todo.price}
+                            Created At: ${todo.createdAt}
                         </ListGroup.Item>
 
                         <ListGroup.Item>

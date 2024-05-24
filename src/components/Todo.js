@@ -9,11 +9,11 @@ function Todo({todo}) {
             <Card.Body>
                 <Link to={`/todo/${todo._id}`}>
                     <Card.Title as='div'>
-                        <strong>{todo.name}</strong>
+                        <strong>{todo.title}</strong>
                     </Card.Title> 
                 </Link>
                 <Card.Text as ='h3'>
-                    {todo.price}
+                    {todo.createdAt}
                 </Card.Text>
 
             </Card.Body>
