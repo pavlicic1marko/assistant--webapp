@@ -8,6 +8,7 @@ import LoginScreen from './screens/LoginScreen';
 import RegisterScreens from './screens/RegisterScreens';
 import ProfileScreen from './screens/ProfileScreen';
 import AiChatScreen from './screens/AiChatScreen';
+import NewHomeScreen from './screens/NewHomeScreen';
 
 function App() {
   return (
@@ -16,10 +17,11 @@ function App() {
         <main className='py-3'>
           <Container>
             <Routes>
-              <Route path='/' element={<HomeScreen/>} exact/>
+              <Route path='/' element={<NewHomeScreen/>} exact/>
               <Route path='/login' element={<LoginScreen/>} />
               <Route path='/register' element={<RegisterScreens/>} />
               <Route path='/todo/:id' element={<TodoScreen/>} />
+              <Route path='/todo' element={<HomeScreen/>} />
               <Route path='/profile' element={<ProfileScreen/>} />
               <Route path='/ai-chat' element={<AiChatScreen/>}/>
             </Routes>
