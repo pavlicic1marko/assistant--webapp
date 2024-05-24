@@ -35,14 +35,15 @@ function Header() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
 
-            <LinkContainer to='/ai-chat'>
-                <Navbar.Brand >AI Chat</Navbar.Brand>
-            </LinkContainer>
 
             {userInfo ? (
                                 <NavDropdown title={userInfo.name} id='username'>
                                     <LinkContainer to='/profile'>
                                         <NavDropdown.Item>Profile</NavDropdown.Item>
+                                    </LinkContainer>
+
+                                    <LinkContainer to='/ai-chat'>
+                                        <NavDropdown.Item >AI Chat</NavDropdown.Item>
                                     </LinkContainer>
 
                                     <NavDropdown.Item onClick={logoutHandler}>Logout</NavDropdown.Item>
