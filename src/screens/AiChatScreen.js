@@ -1,8 +1,34 @@
-import React from 'react'
+import React, { useState, submitHandler } from 'react'
+import { Form, Button } from 'react-bootstrap'
+
 
 function AiChatScreen() {
+
+  const [question, setQuestion] = useState('')
+
+
   return (
-    <div>AiChatScreen</div>
+    <div>
+            <h1>Ask ChatGPT</h1>
+            <Form onSubmit={submitHandler}>
+
+                <Form.Group controlId='email'>
+                    <Form.Label>Your Question:</Form.Label>
+                    <Form.Control
+                        type='text'
+                        placeholder='type question for AI here'
+                        value={question}
+                        onChange={(e) => setQuestion(e.target.value)}
+                    >
+                    </Form.Control>
+                </Form.Group>
+
+
+                <Button type='submit' variant='primary'>
+                    ASK
+                </Button>
+            </Form>
+    </div>
   )
 }
 
