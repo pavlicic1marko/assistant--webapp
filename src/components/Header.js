@@ -28,7 +28,7 @@ function Header() {
       <Container>
 
         <LinkContainer to='/'>
-            <Navbar.Brand >Todo</Navbar.Brand>
+            <Navbar.Brand >Home</Navbar.Brand>
         </LinkContainer>
         
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -44,6 +44,10 @@ function Header() {
 
                                     <LinkContainer to='/ai-chat'>
                                         <NavDropdown.Item >AI Chat</NavDropdown.Item>
+                                    </LinkContainer>
+
+                                    <LinkContainer to='/todo'>
+                                        <NavDropdown.Item >Todo</NavDropdown.Item>
                                     </LinkContainer>
 
                                     <NavDropdown.Item onClick={logoutHandler}>Logout</NavDropdown.Item>
