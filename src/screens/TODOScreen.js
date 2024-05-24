@@ -40,7 +40,7 @@ function TodoScreen({match}) {
                         </ListGroup.Item>
 
                     </ListGroup>
-                    <Button className='btn-block1' disabled={todo.countInStock == 0} type='button'>Delete TODO</Button>
+                    <Button className='btn-block1' type='button'>Delete TODO</Button>
 
                 </Col>
             </Row>
