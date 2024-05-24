@@ -22,7 +22,7 @@ function TodoScreen({match}) {
 
     return (
          <div>
-            <Link to='/' className='btn btn-light my-3'>Go Back</Link>
+            <Link to='/todo' className='btn btn-light my-3'>Go Back</Link>
             <Row>
                 <Col md={3}>
                     <ListGroup variant='flush'>
