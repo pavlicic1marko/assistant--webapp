@@ -40,7 +40,7 @@ function LoginScreen() {
 
                 <Form.Group controlId='email'>
                     <Form.Label>Email Address</Form.Label>
-                    <Form.Control
+                    <Form.Control qa-id='email-id'
                         type='text'
                         placeholder='Enter Email'
                         value={email}
@@ -52,7 +52,7 @@ function LoginScreen() {
 
                 <Form.Group controlId='password'>
                     <Form.Label>Password</Form.Label>
-                    <Form.Control
+                    <Form.Control qa-id='password'
                         type='password'
                         placeholder='Enter Password'
                         value={password}
@@ -61,7 +61,7 @@ function LoginScreen() {
                     </Form.Control>
                 </Form.Group>
 
-                <Button type='submit' variant='primary'>
+                <Button type='submit' variant='primary' qa-id='sigin-button'>
                     Sign In
                 </Button>
             </Form>
