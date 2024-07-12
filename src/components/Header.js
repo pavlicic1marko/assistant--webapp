@@ -27,7 +27,7 @@ function Header() {
     <Navbar expand="lg" bg='dark' cariant='dark' collapseOnSelect>
       <Container>
 
-        <LinkContainer to='/'>
+        <LinkContainer qa-id='qa-home' to='/'>
             <Navbar.Brand >Home</Navbar.Brand>
         </LinkContainer>
         
