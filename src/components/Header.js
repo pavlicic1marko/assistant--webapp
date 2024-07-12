@@ -27,7 +27,7 @@ function Header() {
     <Navbar expand="lg" bg='dark' cariant='dark' collapseOnSelect>
       <Container>
 
-        <LinkContainer to='/'>
+        <LinkContainer qa-id='qa-home' to='/'>
             <Navbar.Brand >Home</Navbar.Brand>
         </LinkContainer>
         
@@ -38,15 +38,15 @@ function Header() {
 
             {userInfo ? (
                                 <NavDropdown title={userInfo.name} id='username'>
-                                    <LinkContainer to='/profile'>
+                                    <LinkContainer qa-id='profile' to='/profile'>
                                         <NavDropdown.Item>Profile</NavDropdown.Item>
                                     </LinkContainer>
 
-                                    <LinkContainer to='/ai-chat'>
+                                    <LinkContainer qa-id='ai-chat' to='/ai-chat'>
                                         <NavDropdown.Item >AI Chat</NavDropdown.Item>
                                     </LinkContainer>
 
-                                    <LinkContainer to='/todo'>
+                                    <LinkContainer qa-id='todo' to='/todo'>
                                         <NavDropdown.Item >Todo</NavDropdown.Item>
                                     </LinkContainer>
 
@@ -54,7 +54,7 @@ function Header() {
 
                                 </NavDropdown>
                             ) : (
-                                    <LinkContainer to='/login'>
+                                    <LinkContainer  to='/login'>
                                         <Nav.Link><i className="fas fa-user"></i>Login</Nav.Link>
                                     </LinkContainer>
                                 )}
