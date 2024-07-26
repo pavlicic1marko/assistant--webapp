@@ -1,4 +1,4 @@
-import {createStore, combineReducers, applyMiddleware} from 'redux';
+import {createStore, combineReducers, applyMiddleware, compose, vrootReducer } from 'redux';
 import {thunk} from "redux-thunk";
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { todoListReducer } from './reducers/todoReducers';
@@ -21,7 +21,17 @@ const initialState = {
 
 const middleware = [thunk]
 
-const store =  createStore(reducer, initialState,
-    composeWithDevTools(applyMiddleware(...middleware)))
+const composeEnhancers =
+  process.env.NODE_ENV !== 'production' &&
+  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?   
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
+      name: 'MyApp', actionsBlacklist: ['REDUX_STORAGE_SAVE']
+    }) : compose;
+const enhancer = composeEnhancers(
+  applyMiddleware(...middleware),
+  // other store enhancers if any
+);
+
+const store = createStore(reducer ,enhancer);
 
 export default store
