@@ -7,7 +7,6 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import LoginScreen from './screens/LoginScreen';
 import RegisterScreens from './screens/RegisterScreens';
 import ProfileScreen from './screens/ProfileScreen';
-import AiChatScreen from './screens/AiChatScreen';
 import NewHomeScreen from './screens/NewHomeScreen';
 
 function App() {
@@ -23,7 +22,6 @@ function App() {
               <Route path='/todo/:id' element={<TodoScreen/>} />
               <Route path='/todo' element={<HomeScreen/>} />
               <Route path='/profile' element={<ProfileScreen/>} />
-              <Route path='/ai-chat' element={<AiChatScreen/>}/>
             </Routes>
             
           </Container>
