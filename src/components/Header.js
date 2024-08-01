@@ -42,10 +42,6 @@ function Header() {
                                         <NavDropdown.Item>Profile</NavDropdown.Item>
                                     </LinkContainer>
 
-                                    <LinkContainer qa-id='ai-chat' to='/ai-chat'>
-                                        <NavDropdown.Item >AI Chat</NavDropdown.Item>
-                                    </LinkContainer>
-
                                     <LinkContainer qa-id='todo' to='/todo'>
                                         <NavDropdown.Item >Todo</NavDropdown.Item>
                                     </LinkContainer>
